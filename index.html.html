@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> · 芝麻红薯饼</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #0b1220;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #334155;
+      --primary: #22c55e;
+      --accent: #60a5fa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: linear-gradient(120deg, #0f172a 0%, #1f2937 100%);
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 24px; }
+    header { padding: 48px 0; text-align: center; }
+    .avatar {
+      width: 96px; height: 96px; border-radius: 50%; display: inline-block;
+      background: radial-gradient(circle at 30% 30%, var(--accent), var(--primary));
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+    }
+    h1 { margin: 16px 0 8px; font-size: 32px; }
+    .tagline { color: var(--muted); }
+    .nav { display: flex; gap: 12px; justify-content: center; margin-top: 16px; flex-wrap: wrap; }
+    .nav a {
+      color: var(--text); text-decoration: none; padding: 8px 12px; border: 1px solid var(--border);
+      border-radius: 8px; background: var(--panel); transition: border-color .2s, color .2s;
+    }
+    .nav a:hover { border-color: var(--accent); color: #fff; }
+    .section { margin: 32px 0; padding: 24px; border: 1px solid var(--border); border-radius: 16px; background: var(--panel); }
+    .section h2 { margin-top: 0; font-size: 22px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card { border: 1px solid var(--border); border-radius: 12px; padding: 16px; background: rgba(255,255,255,.02); }
+    .card h3 { margin: 0 0 8px; }
+    .skill { display: flex; align-items: center; gap: 12px; margin: 8px 0; }
+    .bar { flex: 1; height: 8px; background: #1f2937; border-radius: 999px; overflow: hidden; }
+    .bar span { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), var(--primary)); width: 60%; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .badge { padding: 6px 10px; border-radius: 999px; background: var(--panel); border: 1px solid var(--border); color: var(--muted); text-decoration: none; display: inline-block; }
+    ul { padding-left: 18px; }
+    footer { padding: 32px 0; text-align: center; color: var(--muted); font-size: 14px; }
+    @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { h1 { font-size: 26px; } .grid { grid-template-columns: 1fr; } .section { padding: 16px; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="avatar"></span>
+      <h1>芝麻红薯饼</h1>
+      <p class="tagline">前端爱好者｜持续学习与分享</p>
+      <nav class="nav">
+        <a href="#about">关于我</a>
+        <a href="#skills">技能栈</a>
+        <a href="#projects">项目作品</a>
+        <a href="#contact">联系我</a>
+      </nav>
+    </header>
+
+    <section id="about" class="section">
+      <h2>关于我</h2>
+      <p>我热爱 Web 技术与设计，擅长用简洁的代码构建清晰的用户体验。当前重点学习 HTML、CSS、JavaScript 与常见前端工程化工具。</p>
+      <div class="badges">
+        <span class="badge">学习中</span>
+        <span class="badge">可合作</span>
+        <span class="badge">欢迎交流</span>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>技能栈</h2>
+      <div class="skill"><strong>HTML / CSS</strong><div class="bar"><span style="width:85%"></span></div></div>
+      <div class="skill"><strong>JavaScript</strong><div class="bar"><span style="width:70%"></span></div></div>
+      <div class="skill"><strong>响应式设计</strong><div class="bar"><span style="width:75%"></span></div></div>
+      <div class="skill"><strong>版本管理（Git）</strong><div class="bar"><span style="width:60%"></span></div></div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>项目作品</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>产品卡片</h3>
+          <p>简洁的卡片式展示，适合电商与作品集。</p>
+          <a class="badge" href="综合案例一-产品卡片.html">查看示例</a>
+        </div>
+        <div class="card">
+          <h3>新闻列表</h3>
+          <p>信息密集型页面的排版与层次练习。</p>
+          <a class="badge" href="综合案例二-新闻列表.html">查看示例</a>
+        </div>
+        <div class="card">
+          <h3>个人网页</h3>
+          <p>当前页面，展示风格与布局。</p>
+          <a class="badge" href="#top">回到顶部</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>联系我</h2>
+      <p>如果你有合作或交流意向，欢迎通过以下方式联系我：</p>
+      <ul>
+        <li>邮箱：<a href="mailto:yourname@example.com">yourname@example.com</a></li>
+        <li>微信：请私信告知</li>
+        <li>GitHub：<a href="#" target="_blank" rel="noopener">暂未公开</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> 姚楠 · 保留所有权利</p>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
